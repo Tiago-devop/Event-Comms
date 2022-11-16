@@ -22,6 +22,10 @@ export default class Numerator extends LightningElement {
         const factor = event.detail;
         this.counter *= factor;
     }
+    handleAddNumbers(event) {
+        const number = event.detail;
+        this.counter += +number;
+    }
     handleDividedByTwo() {
         this.counter = this.counter / 2;
     }

@@ -15,6 +15,15 @@
                 </lightning-layout-item>
             </lightning-layout-item>
             <lightning-layout-item flexibility="auto" padding="around-small">
+                <!-- buttons go here -->
+                <lightning-layout-item flexibility="auto" padding="around-small" onbuttonclick={handleNumbersToAdd}>
+                    <template for:each={numbers} for:item="number">
+                        <c-button key={number} label={number} data-number={number} icon="utility:close">
+                        </c-button>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small">
                 <lightning-button label="Add" icon-name="utility:add" onclick={handleAdd} icon-position="right">
                 </lightning-button>
             </lightning-layout-item>
